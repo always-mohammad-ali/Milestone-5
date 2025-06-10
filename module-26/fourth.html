@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event connection</title>
+</head>
+<body>
+    <h1 title="hey sir this is tooltip">Tooltip</h1>
+    
+    <input id="input-text" type="text">
+    <button  id="input-btn">Submit to default text</button>
+    <br>
+    <h2 id="default">Default text</h2>
+    <button onclick="clickk()">Click me</button>
+    <button id="handleEvent">Using addEventlistener</button>
+    
+    <script>
+        document.getElementById('input-btn').addEventListener('click', function(){
+            const inputText = document.getElementById('input-text');
+            const inputValue = inputText.value;
+
+            const defaultID = document.getElementById('default');
+            defaultID.innerText = inputValue;
+
+            inputText.value = '';
+
+            
+        })
+    </script>
+
+    <script src="js/fourth.js"></script>
+    
+</body>
+</html>
