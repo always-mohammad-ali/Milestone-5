@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add comment</title>
+</head>
+<body>
+    <h1>Add your comment</h1>
+
+    <div id="comment-container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta aliquid culpa quaerat itaque quisquam corrupti consequuntur explicabo. Adipisci beatae nesciunt dignissimos unde neque aliquam, sunt nisi aut consectetur in rem modi perspiciatis, totam nam, laborum assumenda inventore eaque laboriosam voluptatibus amet recusandae magni tenetur consequuntur voluptates. Saepe voluptatibus dicta, id ipsum labore blanditiis, quisquam laudantium facere nesciunt at, ratione doloremque cupiditate aliquid. Reprehenderit veniam voluptatum, eveniet sunt distinctio aut modi porro fugit corporis dolores aliquid cumque fuga asperiores officiis repudiandae ipsam id quod totam earum unde cupiditate! Iure ullam quidem, corporis fuga unde tempora, cumque, voluptatem officia alias ex rerum.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, necessitatibus repellat quos ratione error nam dolore minima distinctio hic eos alias maxime sint similique mollitia nihil eius veritatis dolores? Quaerat!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consequatur labore accusantium quas minima consequuntur quasi dolor corrupti placeat debitis?</p>
+    </div>
+
+    <textarea name="" id="input-text" rows="20" cols="60"></textarea>
+    <br>
+    <button id="input-btn">Post Comment</button>
+
+    <script>
+        document.getElementById('input-btn').addEventListener('click', function(){
+             const inputText = document.getElementById('input-text');
+             const inputValue = inputText.value;
+             
+
+             const commentContainer = document.getElementById('comment-container');
+             const p = document.createElement('p');
+             p.innerText = inputValue;
+             
+             
+             commentContainer.appendChild(p);
+
+             inputText.value = '';
+
+
+             
+
+        })
+    </script>
+</body>
+</html>
