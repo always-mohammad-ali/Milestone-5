@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPLORE EVENT DELEGATE</title>
+</head>
+<body>
+    <h1>Explore Event Delegate</h1>
+    <section id="section-container">
+        <ul id="li-container">
+            <li class="item">Lorem, ipsum.</li>
+            <li class="item">Sapiente, possimus?</li>
+            <li class="item">Reiciendis, quaerat.</li>
+            <li class="item">Magni, laboriosam?</li>
+            <li class="item">Facilis, corporis.</li>
+            <li class="item">Cupiditate, maiores.</li>
+        </ul>
+
+        <button id="btn">Add Item</button>
+    </section>
+
+    <script>
+        document.getElementById('li-container').addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+
+        document.getElementById('btn').addEventListener('click', function(event){
+            const li = document.createElement('li');
+            li.innerText = 'new brand item added';
+            li.classList.add('item');
+
+            const liContainer = document.getElementById('li-container');
+            liContainer.appendChild(li);
+
+        })
+
+    </script>
+</body>
+</html>
