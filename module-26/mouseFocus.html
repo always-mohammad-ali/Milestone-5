@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus, mouseenter, mousemove</title>
+</head>
+<body>
+    <button id="btn">MouseEnter</button>
+
+    <button id="btnTwo">MouseMove</button>
+
+    <input id="inputFocus" type="text">
+
+    <input id="keyDown" type="text" placeholder="keyDown">
+    <input id="keyPress" type="text" placeholder="keyPress">
+    <input id="keyUp" type="text" placeholder="keyUp">
+    
+
+
+    <script>
+        document.getElementById('btn').addEventListener('mouseenter', function(){
+            console.log('Mouse ENTERED');
+        })
+
+        document.getElementById('btnTwo').addEventListener('mousemove', function(){
+            console.log('mouse moved')
+        })
+
+        document.getElementById('inputFocus').addEventListener('focus', function(){
+            console.log('input focused')
+        })
+
+        document.getElementById('keyDown').addEventListener('keydown', function(event){
+            console.log(event.target.value)
+        })
+        document.getElementById('keyPress').addEventListener('keypress', function(event){
+            console.log(event.target.value)
+        })
+        document.getElementById('keyUp').addEventListener('keyup', function(event){
+            console.log(event.target.value)
+        })
+
+        
+    </script>
+</body>
+</html>

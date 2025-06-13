@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete github post</title>
+</head>
+<body>
+    <h1 id="delPost">DELETE My post BY CLICKING DEL</h1>
+    <button id="delBtn">DEL</button>
+
+    <h1 id="del-post">Delete post by writing delete</h1>
+    <input id="delInput" type="text" placeholder="type delete">
+    <button id="DEL" disabled>delete</button>
+
+    <script>
+        document.getElementById('delBtn').addEventListener('click', function(){
+            const post = document.getElementById('delPost');
+            post.style.display = 'none';
+        })
+
+        
+            const del = document.getElementById('DEL');
+            document.getElementById('delInput').addEventListener('keyup', function(event){
+                const text = event.target.value;
+                if(text === 'delete'){
+                    del.removeAttribute('disabled')
+                }
+                else{
+                    del.setAttribute('enabled', true)
+                }
+            })
+
+            document.getElementById('DEL').addEventListener('click', function(){
+
+            const postTwo = document.getElementById('del-post');
+            postTwo.style.display = 'none';
+
+            })
+            
+        
+
+        
+        
+    </script>
+</body>
+</html>
